@@ -7,5 +7,7 @@ WORKDIR /app
 COPY . app.py /app/
 
 # Install packages from requirements.txt
-RUN pip install --upgrade pip &&\
-    pip install --trusted-host pypi.python.org -r requirements.txt
+RUN pip3 install --upgrade pip &&\
+    pip3 install --trusted-host pypi.python.org -r requirements.txt
+
+EXPOSE 8080
